@@ -45,6 +45,39 @@ The application uses a Large Language Model (LLM) to understand user questions, 
 8. The LLM generates a natural-language explanation.
 9. The frontend displays the answer and relevant charts.
 
+Architecture:
+
+                 User
+                   |
+                   v
+           Frontend (HTML/CSS/JS)
+                   |
+                   v
+            FastAPI Backend
+                   |
+                   v
+              Groq LLM
+           (Question Understanding)
+                   |
+                   v
+           Analytics Tool Calling
+                   |
+                   v
+           Python Validation
+                   |
+                   v
+            SQLite Database
+                   |
+                   v
+            Actual Query Results
+                   |
+                   v
+              Groq LLM
+           (Generate Explanation)
+                   |
+                   v
+           Frontend (Answer + Chart)
+
 ## 5. Project Structure
 
 ```text

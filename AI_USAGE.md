@@ -41,3 +41,43 @@ The actual database results are sent back to the LLM to generate a natural-langu
 The analytics calculations are performed using Python and SQLite rather than relying on the LLM to calculate business figures.
 
 The results were verified using direct database queries and automated tests.
+
+## 6. Problems Encountered and Debugging
+
+### Problem 1: Data quality issues
+
+The CSV contained missing unit prices and invalid quantity values.
+
+**How I debugged it:**
+- Used Pandas to inspect and identify invalid records.
+- Converted numeric columns and dates into appropriate data types.
+- Stored data-quality issues and excluded invalid transactions from analytics.
+
+### Problem 2: LLM-generated business analysis
+
+The LLM could misunderstand questions or potentially produce incorrect business figures.
+
+**How I debugged it:**
+- Implemented function/tool calling.
+- Restricted the LLM to predefined analytics functions.
+- Validated function arguments before execution.
+- Used SQLite to calculate actual business figures instead of trusting the LLM to calculate them.
+
+### Problem 3: Frontend response formatting
+
+The frontend initially needed to display formatted AI-generated answers and charts.
+
+**How I debugged it:**
+- Used Marked.js to render Markdown.
+- Used DOMPurify to sanitize generated HTML.
+- Used Chart.js to visualize structured analytics results.
+
+## 7. Improvements With Another Day of Work
+
+If I had another day, I would:
+
+1. Support more complex business questions, including month-to-month comparisons and revenue growth.
+2. Improve LLM question interpretation and handling of ambiguous questions.
+3. Add more automated tests, including API integration and error-handling tests.
+4. Improve the frontend with filters, better visualizations, and downloadable reports.
+5. Add more detailed data-quality reports and logging.
