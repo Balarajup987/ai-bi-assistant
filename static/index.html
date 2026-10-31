@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Business Intelligence Assistant</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>AI Business Intelligence Assistant</h1>
+            <p>Ask questions about your sales data using natural language.</p>
+        </header>
+
+        <section class="question-box">
+            <input
+                type="text"
+                id="question"
+                placeholder="Example: Which product generated the highest revenue?"
+            >
+            <button id="askButton" onclick="askQuestion()">Ask AI</button>
+
+            <div class="suggestions">
+                <button onclick="setQuestion('What is the total revenue?')">
+                    Total Revenue
+                </button>
+                <button onclick="setQuestion('Which product generated the highest revenue?')">
+                    Top Product
+                </button>
+                <button onclick="setQuestion('Show sales by region')">
+                    Region Sales
+                </button>
+                <button onclick="setQuestion('Show monthly sales')">
+                    Monthly Sales
+                </button>
+            </div>
+        </section>
+
+        <p id="status"></p>
+
+        <section id="result" class="result-box">
+            <h2>Business Insights</h2>
+            <p id="answer">Your answer will appear here.</p>
+        </section>
+
+        <section class="chart-box">
+            <h2>Sales Visualization</h2>
+            <canvas id="salesChart"></canvas>
+        </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@3.2.6/dist/purify.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="/static/script.js"></script>
+    
+</body>
+</html>

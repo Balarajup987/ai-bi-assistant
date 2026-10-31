@@ -1,0 +1,150 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f3f5f9;
+    color: #1f2937;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: #243b70;
+    margin-bottom: 10px;
+}
+
+.question-box,
+.result-box,
+.chart-box {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+}
+
+input {
+    width: 78%;
+    padding: 14px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    font-size: 15px;
+}
+
+button {
+    padding: 13px 18px;
+    border: none;
+    border-radius: 7px;
+    background: #3157a4;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #203e7c;
+}
+
+.suggestions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.suggestions button {
+    background: #e8eefb;
+    color: #243b70;
+}
+
+#status {
+    margin: 12px 0;
+    color: #555;
+}
+
+.result-box h2,
+.chart-box h2 {
+    margin-bottom: 18px;
+}
+
+#answer {
+    line-height: 1.8;
+    white-space: pre-line;
+}
+
+.chart-box canvas {
+    max-height: 350px;
+}
+
+@media (max-width: 600px) {
+    input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .container {
+        margin: 15px auto;
+    }
+}
+
+#answer {
+    line-height: 1.8;
+    overflow-x: auto;
+}
+
+#answer h1,
+#answer h2,
+#answer h3 {
+    margin: 18px 0 10px;
+    color: #243b70;
+}
+
+#answer p {
+    margin-bottom: 12px;
+}
+
+#answer strong {
+    color: #243b70;
+}
+
+#answer table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 18px 0;
+    background: white;
+}
+
+#answer th,
+#answer td {
+    padding: 12px 15px;
+    border: 1px solid #e2e8f0;
+    text-align: left;
+}
+
+#answer th {
+    background: #243b70;
+    color: white;
+}
+
+#answer tr:nth-child(even) {
+    background: #f3f5f9;
+}
+
+#answer ul,
+#answer ol {
+    padding-left: 25px;
+    margin-bottom: 15px;
+}
